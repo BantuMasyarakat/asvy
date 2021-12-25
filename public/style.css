@@ -1,0 +1,261 @@
+body {
+    background-image: url("img/bg.jpg");
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: repeat-y;
+    background-size: contain;
+}
+
+#start {
+    position: relative;
+    display: flex;
+    height: 2.4rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    height: 2rem;
+    width: 5rem;
+    background-color: rgb(255, 121, 11);
+    color: white;
+}
+
+h1.title {
+    font-family: "Kaushan Script", cursive;
+    font-size: 3rem;
+}
+
+.sprt {
+    width: 0.2rem;
+    height: 3rem;
+    background-color: white;
+    margin: 0 1.4rem 0 1.4rem;
+}
+
+.co-title {
+    line-height: 15px;
+    font-size: 0.9rem;
+    /* font-family: "Archivo", sans-serif; */
+    font-family: serif;
+    letter-spacing: 1px;
+    animation: enterance cubic-bezier(0.195, 0.145, 0.07, 1.65) 1s;
+}
+
+.navigate {
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+}
+
+.navi {
+    width: 30px;
+    height: 30px;
+    background-color: #08b002;
+    border-radius: 50%;
+    border: 2px solid #08b002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.active::before {
+    content: "";
+    width: 140%;
+    height: 140%;
+    background-color: rgba(0, 155, 76, 0.7);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    animation: active 0.5s ease;
+}
+
+.active::after {
+    content: "";
+    width: 160%;
+    height: 160%;
+    background-color: rgba(0, 155, 76, 0.7);
+    position: absolute;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(2px);
+    animation: active 0.5s ease;
+}
+
+.navigate .line {
+    position: absolute;
+    width: 2px;
+    top: 0;
+    bottom: 0;
+    background-color: #08b002;
+    z-index: -1;
+}
+
+/* info section */
+section.info {
+    border-radius: 0 3rem 3rem 0;
+}
+
+section.info .info-t {
+    width: 60%;
+    color: #08b002;
+    font-family: "Kaushan Script", cursive;
+    border-bottom: 2px solid #08b002;
+}
+
+section.info .info-p {
+    width: 60%;
+    font-family: serif;
+}
+
+/* how section */
+section.how {
+    border-radius: 0 3rem 3rem 0;
+}
+
+section.how .how-t {
+    width: 60%;
+    color: #d60707;
+    font-family: "Kaushan Script", cursive;
+    border-bottom: 2px solid #d60707;
+}
+
+section.how .how-p {
+    width: 60%;
+    font-family: serif;
+}
+
+/* start section */
+section.start {
+    border-radius: 0 3rem 3rem 0;
+}
+
+section.start .start-t {
+    width: 60%;
+    color: #08b002;
+    font-family: "Kaushan Script", cursive;
+    border-bottom: 2px solid #08b002;
+}
+
+section.start .start-h {
+    width: 60%;
+    font-family: serif;
+}
+
+section.start .slide {
+    width: 60%;
+    height: 3rem;
+    background-color: #d60707;
+    position: relative;
+    z-index: 9;
+}
+
+section.start .triangle {
+    width: 1.4rem;
+    height: 1.4rem;
+    clip-path: polygon(100% 0, 100% 100%, 0 50%);
+    background-color: white;
+}
+
+section.start .triangle:nth-child(3) {
+    transform: rotateZ(180deg);
+}
+
+section.start .start-count {
+    font-family: serif;
+    background-color: transparent;
+    border: none;
+    width: 2rem;
+}
+
+footer {
+    border-radius: 0 4rem 0 0;
+    margin-top: 5rem;
+}
+
+footer .foot-t {
+    width: 80%;
+    font-family: serif;
+}
+
+footer .foot-p {
+    border-left: 2px solid white;
+    width: 80%;
+    font-family: serif;
+    font-size: 0.7rem;
+}
+
+footer .foot-c {
+    border-top: 1px solid rgb(90, 90, 90);
+    width: 80%;
+    font-family: serif;
+    font-size: 0.4rem;
+    display: flex;
+    justify-content: center;
+}
+
+/* Start Css */
+section.title h3 {
+    color: #b00202;
+    font-family: "Kaushan Script", cursive;
+}
+
+section.title input {
+    outline: none;
+    background-color: transparent;
+}
+
+section.title input::placeholder {
+    font-style: italic;
+}
+
+section.body h3 {
+    color: #08b002;
+    font-family: "Kaushan Script", cursive;
+}
+
+section.body hr {
+    border-top: 1px dotted rgb(88, 88, 88);
+}
+
+section.body textarea::placeholder {
+    font-style: italic;
+}
+
+section.body input::placeholder {
+    font-style: italic;
+}
+
+section.body h6 {
+    font-family: serif;
+}
+
+@media only screen and (min-width: 600px) {
+    body {
+        background-size: cover;
+    }
+}
+
+@keyframes active {
+    0% {
+        transform: scale(0, 0);
+    }
+
+    100% {
+        transform: scale(100%, 100%);
+    }
+}
+
+@keyframes enterance {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
