@@ -1,10 +1,10 @@
 const express = require("express");
 const req = require("express/lib/request");
-const port = 3000;
 const app = express();
 const fs = require("fs");
 const PDFDocument = require("pdfkit");
 const blobStream = require("blob-stream");
+const port = process.env.PORT || 5000;
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
